@@ -1,0 +1,6 @@
+res://scenes/main_menu.tscn
+res://scenes/projectile.tscn
+res://scenes/line_2d.gd
+res://scenes/player.tscn
+res://scenes/projectile.gd
+res://scripts/character.gd

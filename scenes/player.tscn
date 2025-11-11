@@ -21,6 +21,7 @@ rotation = -1.5707964
 texture = ExtResource("1_3vyb7")
 
 [node name="shootTimer" type="Timer" parent="Character"]
+one_shot = true
 
 [node name="bulletHolder" type="Node2D" parent="."]
 

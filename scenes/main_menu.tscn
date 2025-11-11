@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://brtg7ebsxyqvd" path="res://Concept Art/MainMenuConceptArt.png" id="1_wu84c"]
 [ext_resource type="Texture2D" uid="uid://8cycq8jkspdi" path="res://Concept Art/Button.png" id="2_wu84c"]
 [ext_resource type="Script" uid="uid://bv1epgnyeycup" path="res://scripts/start_game.gd" id="3_8ln24"]
-[ext_resource type="Script" uid="uid://dhidypwgfoadu" path="res://scenes/quit_game.gd" id="4_rtw2f"]
+[ext_resource type="Script" uid="uid://dhidypwgfoadu" path="res://scripts/quit_game.gd" id="4_rtw2f"]
 [ext_resource type="AudioStream" uid="uid://ddh02cu0oh5k3" path="res://music/stalkerish_song.mp3" id="5_8ln24"]
 
 [node name="MainMenu" type="Node2D"]

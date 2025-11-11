@@ -22,12 +22,24 @@ func _physics_process(delta: float) -> void:
 
 @onready var shootTimer: Timer = $shootTimer
 var shootable=true
+var weaponName="makarov"
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("shoot"):
+	if event.is_action_pressed("shoot") && shootable:
 		shootable=false
-		shootTimer.start()
-		
+		shoot(weaponName)
 
+var proj=preload("res://scenes/projectile.tscn")
+@onready var parent=get_parent()
+
+func shoot(weaponName):
+	if weaponName=="makarov":
+		shootTimer.wait_time=0.2
+		shootTimer.start()
+		var projInstance=proj.instantiate()
+		projInstance.direction=Vector2(cos(rotation),sin(rotation))
+		projInstance.speed=500
+		parent.get_child(1).add_child(projInstance)
+		projInstance.global_position=global_position
 
 func _on_shoot_timer_timeout() -> void:
 	shootable=true
