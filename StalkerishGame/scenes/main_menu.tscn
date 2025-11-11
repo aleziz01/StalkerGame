@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgiaxt7rgxg8f"]
+
+[ext_resource type="Texture2D" uid="uid://brtg7ebsxyqvd" path="res://Concept Art/MainMenuConceptArt.png" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://8cycq8jkspdi" path="res://Concept Art/Button.png" id="2_wu84c"]
+[ext_resource type="Script" uid="uid://bv1epgnyeycup" path="res://scripts/start_game.gd" id="3_8ln24"]
+[ext_resource type="Script" uid="uid://dhidypwgfoadu" path="res://scenes/quit_game.gd" id="4_rtw2f"]
+[ext_resource type="AudioStream" uid="uid://ddh02cu0oh5k3" path="res://music/stalkerish_song.mp3" id="5_8ln24"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.12, 1)
+texture = ExtResource("1_wu84c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 0.39607844)
+polygon = PackedVector2Array(-693, -387, 675, -395, 690, 384, -673, 388)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -294.0
+offset_top = -339.0
+offset_right = -60.0
+offset_bottom = -311.50308
+scale = Vector2(8.11, 8.11)
+bbcode_enabled = true
+text = "I  wander..."
+
+[node name="startGame" type="TextureButton" parent="."]
+offset_left = -128.0
+offset_top = -87.0
+offset_bottom = -23.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_wu84c")
+script = ExtResource("3_8ln24")
+
+[node name="quitGame" type="TextureButton" parent="."]
+offset_left = -128.0
+offset_top = 62.0
+offset_bottom = 126.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_wu84c")
+script = ExtResource("4_rtw2f")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8ln24")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="startGame" to="startGame" method="_on_pressed"]
+[connection signal="pressed" from="quitGame" to="quitGame" method="_on_pressed"]
