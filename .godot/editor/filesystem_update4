@@ -4,3 +4,6 @@ res://scenes/line_2d.gd
 res://scenes/player.tscn
 res://scenes/projectile.gd
 res://scripts/character.gd
+res://scripts/line_2d.gd
+res://scripts/projectile.gd
+res://scenes/main.tscn

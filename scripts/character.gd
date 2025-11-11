@@ -37,9 +37,11 @@ func shoot(weaponName):
 		shootTimer.start()
 		var projInstance=proj.instantiate()
 		projInstance.direction=Vector2(cos(rotation),sin(rotation))
-		projInstance.speed=500
+		projInstance.speed=300
+		projInstance.initpos=global_position
+		projInstance.rot=rotation
 		parent.get_child(1).add_child(projInstance)
-		projInstance.global_position=global_position
+
 
 func _on_shoot_timer_timeout() -> void:
 	shootable=true
