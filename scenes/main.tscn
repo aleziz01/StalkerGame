@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp6lotrvv5l3u"]
+[gd_scene load_steps=3 format=3 uid="uid://bp6lotrvv5l3u"]
 
 [ext_resource type="PackedScene" uid="uid://54t8qhs1mgcg" path="res://scenes/player.tscn" id="1_o5qli"]
+
+[sub_resource type="Environment" id="Environment_o5qli"]
+glow_enabled = true
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
@@ -10,3 +13,6 @@ texture_filter = 1
 [node name="Polygon2D" type="Polygon2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o5qli")
