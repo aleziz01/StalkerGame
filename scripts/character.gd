@@ -30,6 +30,7 @@ func _input(event: InputEvent) -> void:
 
 var proj=preload("res://scenes/projectile.tscn")
 @onready var parent=get_parent()
+@onready var weapon_position: Node2D = $weaponPosition
 
 func shoot(weaponName):
 	if weaponName=="makarov":
@@ -38,7 +39,7 @@ func shoot(weaponName):
 		var projInstance=proj.instantiate()
 		projInstance.direction=Vector2(cos(rotation),sin(rotation))
 		projInstance.speed=300
-		projInstance.initpos=global_position
+		projInstance.initpos=weapon_position.global_position
 		projInstance.rot=rotation
 		parent.get_child(1).add_child(projInstance)
 

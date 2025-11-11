@@ -23,6 +23,9 @@ texture = ExtResource("1_3vyb7")
 [node name="shootTimer" type="Timer" parent="Character"]
 one_shot = true
 
+[node name="weaponPosition" type="Node2D" parent="Character"]
+position = Vector2(7.6666665, 6)
+
 [node name="bulletHolder" type="Node2D" parent="."]
 
 [connection signal="timeout" from="Character/shootTimer" to="Character" method="_on_shoot_timer_timeout"]
