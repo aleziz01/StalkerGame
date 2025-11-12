@@ -1,9 +1,9 @@
-res://scenes/main_menu.tscn
-res://scenes/projectile.tscn
-res://scenes/line_2d.gd
 res://scenes/player.tscn
-res://scenes/projectile.gd
+res://scenes/main.tscn
+res://scenes/projectile.tscn
+res://scripts/projectile.gd
+res://scenes/DeathParticles.tscn
+res://scripts/death_particles.gd
+res://scenes/main_menu.tscn
 res://scripts/character.gd
 res://scripts/line_2d.gd
-res://scripts/projectile.gd
-res://scenes/main.tscn

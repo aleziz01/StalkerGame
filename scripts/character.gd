@@ -23,8 +23,8 @@ func _physics_process(delta: float) -> void:
 @onready var shootTimer: Timer = $shootTimer
 var shootable=true
 var weaponName="makarov"
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("shoot") && shootable:
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("shoot") && shootable:
 		shootable=false
 		shoot(weaponName)
 

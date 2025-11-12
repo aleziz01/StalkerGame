@@ -1,9 +1,12 @@
-WorldEnvironment
 Node2D
-PointLight2D
+GPUParticles2D
+Polygon2D
+CollisionShape2D
 Camera2D
+StaticBody2D
+WorldEnvironment
+PointLight2D
 Timer
 Line2D
-CollisionShape2D
 Area2D
 Sprite2D

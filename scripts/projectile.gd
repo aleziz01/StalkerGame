@@ -14,3 +14,13 @@ func _process(delta: float) -> void:
 
 func _on_decay_timer_timeout() -> void:
 	queue_free()
+
+@onready var particlePosition: Node2D = $ParticlePosition
+
+var endParticles=preload("res://scenes/DeathParticles.tscn")
+func _on_body_entered(body: Node2D) -> void:
+	var endParticleInstance=endParticles.instantiate()
+	get_parent().add_child(endParticleInstance)
+	endParticleInstance.global_position=particlePosition.global_position
+	endParticleInstance.rotation=rotation
+	queue_free()
