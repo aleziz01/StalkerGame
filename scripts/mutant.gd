@@ -46,11 +46,21 @@ func _on_timer_timeout() -> void:
 
 func updateHP(hpAmount):
 	hp+=hpAmount
+	if hpAmount<0:
+		damageAnim()
 	if hp<=0:
 		die()
+
+func damageAnim():
+	modulate=Color(1.137, 0.317, 0.0, 1.0) #change this color to accomodate to the sprites
+	await get_tree().create_timer(0.1).timeout
+	modulate=Color(1.0, 1.0, 1.0, 1.0)
 
 func die():
 	#play death animation
 	for i in get_children():
 		if i!=get_child(0):
 			i.queue_free()
+	target=null
+	direction=Vector2.ZERO
+	speed=0
