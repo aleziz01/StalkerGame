@@ -23,7 +23,7 @@ size = Vector2(74, 50)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smdei"]
 size = Vector2(78, 54)
 
-[node name="Mutant" type="CharacterBody2D" groups=["enemy"]]
+[node name="Mutant" type="CharacterBody2D" groups=["entity"]]
 collision_layer = 64
 script = ExtResource("1_smdei")
 

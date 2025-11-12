@@ -19,8 +19,8 @@ func _on_decay_timer_timeout() -> void:
 
 var endParticles=preload("res://scenes/BulletParticlesWall.tscn")
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("enemy"):
-		body.updateHP(-20)
+	if body.is_in_group("entity"):
+		body.updateHP(-1*damage)
 	else:
 		var endParticleInstance=endParticles.instantiate()
 		get_parent().add_child(endParticleInstance)

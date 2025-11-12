@@ -5,6 +5,8 @@ var hp=100
 var direction=Vector2.ZERO
 var attacking=false
 var attackCooldown=false
+var target=null
+
 func _physics_process(delta: float) -> void:
 	if target && !attacking && (target.global_position-global_position).length()>30:
 		direction=(target.global_position-global_position).normalized()
@@ -32,7 +34,7 @@ func attack():
 	await get_tree().create_timer(2).timeout
 	attackCooldown=false
 
-var target=null
+
 func _on_detection_range_body_entered(body: Node2D) -> void:
 	target=body
 	speed=250

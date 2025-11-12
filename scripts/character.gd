@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 
 const SPEED = 10000.0
-const FRICTION = 250000.0
 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -41,8 +40,23 @@ func shoot(weaponName):
 		projInstance.speed=1200
 		projInstance.initpos=weapon_position.global_position
 		projInstance.rot=rotation
+		projInstance.damage=20
 		parent.get_child(1).add_child(projInstance)
 
 
 func _on_shoot_timer_timeout() -> void:
 	shootable=true
+
+var hp=100
+func updateHP(hpAmount):
+	hp+=hpAmount
+	if hpAmount<0:
+		damageAnim()
+	if hp<=0:
+		die()
+
+func damageAnim(): #TODO
+	pass
+
+func die(): #TODO
+	pass
