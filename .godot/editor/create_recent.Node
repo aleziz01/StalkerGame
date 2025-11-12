@@ -1,3 +1,4 @@
+Timer
 CollisionShape2D
 CharacterBody2D
 Area2D
@@ -10,5 +11,4 @@ Camera2D
 StaticBody2D
 WorldEnvironment
 PointLight2D
-Timer
 Line2D

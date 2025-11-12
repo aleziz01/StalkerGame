@@ -54,7 +54,6 @@ autostart = true
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="ParticlePosition" type="Node2D" parent="."]
-position = Vector2(13, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="decayTimer" to="." method="_on_decay_timer_timeout"]
