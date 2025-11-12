@@ -9,3 +9,4 @@ res://scripts/character.gd
 res://scripts/line_2d.gd
 res://scenes/BulletParticlesWall.tscn
 res://scenes/mutant.tscn
+res://scripts/mutant.gd
