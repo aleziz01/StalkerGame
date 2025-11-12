@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var speed=25
+var hp=100
 var direction=Vector2.ZERO
 var attacking=false
 var attackCooldown=false
@@ -10,8 +11,13 @@ func _physics_process(delta: float) -> void:
 		if (target.global_position-global_position).length()<200 && !attackCooldown:
 			attacking=true
 			attack()
+			#play the lunging animation
+		else:
+			pass
+			#play the following animation (running animation for mutant) 
 	elif target && (target.global_position-global_position).length()<30 && !attacking:
 		direction=Vector2.ZERO
+		#play the attacking animation here
 	look_at(global_position+direction)
 	global_position+=direction*speed*delta
 	move_and_slide()
@@ -37,3 +43,14 @@ func _on_timer_timeout() -> void:
 	direction=Vector2(randf_range(-1,1),randf_range(-1,1))
 	await get_tree().create_timer(2.0).timeout
 	direction=Vector2.ZERO
+
+func updateHP(hpAmount):
+	hp+=hpAmount
+	if hp<=0:
+		die()
+
+func die():
+	#play death animation
+	for i in get_children():
+		if i!=get_child(0):
+			i.queue_free()
