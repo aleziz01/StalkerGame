@@ -64,3 +64,4 @@ func die():
 	target=null
 	direction=Vector2.ZERO
 	speed=0
+	z_index=-1
