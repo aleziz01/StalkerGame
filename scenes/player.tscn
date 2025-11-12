@@ -9,7 +9,7 @@ size = Vector2(8.666667, 18.666668)
 [node name="Player" type="Node2D"]
 texture_filter = 1
 
-[node name="Character" type="CharacterBody2D" parent="."]
+[node name="Character" type="CharacterBody2D" parent="." groups=["entity"]]
 scale = Vector2(3, 3)
 collision_layer = 128
 script = ExtResource("1_g2els")

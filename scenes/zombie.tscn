@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpwfmyq247w5p"]
+
+[ext_resource type="Texture2D" uid="uid://b8dpfm8vc6wga" path="res://Concept Art/zombieConcept.png" id="1_1vlb3"]
+[ext_resource type="Script" uid="uid://yq7sskdcuw44" path="res://scripts/zombie.gd" id="1_httt1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_httt1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1vlb3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xepks"]
+radius = 473.00424
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gx57"]
+size = Vector2(34, 66)
+
+[node name="zombie" type="CharacterBody2D" groups=["entity"]]
+texture_filter = 1
+collision_layer = 64
+script = ExtResource("1_httt1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -1.5707964
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_httt1")
+
+[node name="DetectionRange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRange"]
+shape = SubResource("CircleShape2D_xepks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4gx57")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="weaponPosition" type="Node2D" parent="."]
+position = Vector2(17, 24)
+
+[connection signal="body_entered" from="DetectionRange" to="." method="_on_detection_range_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
