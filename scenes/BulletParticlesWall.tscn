@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dovtb4sbsbyj"]
 
-[ext_resource type="Script" uid="uid://dowjkprhxchr5" path="res://scripts/death_particles.gd" id="1_aerqb"]
+[ext_resource type="Script" uid="uid://dowjkprhxchr5" path="res://scripts/death_particles.gd" id="1_mqdte"]
 
 [sub_resource type="Gradient" id="Gradient_8fun0"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
@@ -30,4 +30,4 @@ speed_scale = 6.0
 explosiveness = 1.0
 trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_aerqb")
-script = ExtResource("1_aerqb")
+script = ExtResource("1_mqdte")

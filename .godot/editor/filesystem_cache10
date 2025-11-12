@@ -1,22 +1,25 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762947063
+::res://::1762948480
 icon.svg::CompressedTexture2D::5108192912381009088::1762878770::1762878917::1::::<><><>0<>0<>6aa03a7e8142c896f795f31ae48d2371<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://art/::1762878927
-::res://Concept Art/::1762878917
+::res://Concept Art/::1762948798
 Button.png::CompressedTexture2D::2321822266752548282::1762878770::1762878917::1::::<><><>0<>0<>2254015fef610c4b3eccc36ddadb719e<>res://.godot/imported/Button.png-790ae8ec018ae4edc7f77c6d87bd21ad.ctex::
 guyConcept.png::CompressedTexture2D::638106926685148668::1762878770::1762878917::1::::<><><>0<>0<>8a8c9a277d370dd6a63d2b5259f50722<>res://.godot/imported/guyConcept.png-59f6d00a339546e2cf9b3c61057d21b4.ctex::
 MainMenuConceptArt.png::CompressedTexture2D::3619275862716083645::1762878770::1762878917::1::::<><><>0<>0<>323b3eafbde61bea05e35582b2af9f9d<>res://.godot/imported/MainMenuConceptArt.png-953aef2486404a856afd9d8b0e4c99d4.ctex::
+mutant.png::CompressedTexture2D::3303277371051394085::1762948798::1762948799::1::::<><><>0<>0<>6e7a52a7d420842419a5a94e66c8b4b9<>res://.godot/imported/mutant.png-368f6776b9d14b0613b3a46781b1b218.ctex::
 ::res://music/::1762878917
 stalkerish_song.mp3::AudioStreamMP3::7385845504624105632::1762878770::1762878917::1::::<><><>0<>0<>75a7baef0096e00e0d4fa7a1dd323acd<>res://.godot/imported/stalkerish_song.mp3-010b24bd96a83202f04bf1d79f12a514.mp3str::
-::res://scenes/::1762883907
-main.tscn::PackedScene::3503942961863267096::1762883729::0::1::::<><><>0<>0<><>::uid://54t8qhs1mgcg::::res://scenes/player.tscn
-main_menu.tscn::PackedScene::5210531572665413559::1762878939::0::1::::<><><>0<>0<><>::uid://brtg7ebsxyqvd::::res://Concept Art/MainMenuConceptArt.png<>uid://8cycq8jkspdi::::res://Concept Art/Button.png<>uid://bv1epgnyeycup::::res://scripts/start_game.gd<>uid://dhidypwgfoadu::::res://scripts/quit_game.gd<>uid://ddh02cu0oh5k3::::res://music/stalkerish_song.mp3
-player.tscn::PackedScene::2166745670110423650::1762883509::0::1::::<><><>0<>0<><>::uid://jddr7g1gp501::::res://Concept Art/guyConcept.png<>uid://dbgl8606wdqss::::res://scripts/character.gd
-projectile.tscn::PackedScene::4154315112065566065::1762883907::0::1::::<><><>0<>0<><>::uid://doaci6xipfeo1::::res://scripts/projectile.gd<>uid://b7w2xipmery5a::::res://scripts/line_2d.gd
-::res://scripts/::1762883566
-character.gd::GDScript::7242565647642986318::1762883553::0::1::::<>CharacterBody2D<><>0<>0<><>::
-line_2d.gd::GDScript::4679560866674094308::1762883566::0::1::::<>Line2D<><>0<>0<><>::
-projectile.gd::GDScript::8142043246486614750::1762883027::0::1::::<>Area2D<><>0<>0<><>::
+::res://scenes/::1762948504
+BulletParticlesWall.tscn::PackedScene::240776904545784413::1762948481::0::1::::<><><>0<>0<><>::uid://dowjkprhxchr5::::res://scripts/death_particles.gd
+main.tscn::PackedScene::3503942961863267096::1762947438::0::1::::<><><>0<>0<><>::uid://54t8qhs1mgcg::::res://scenes/player.tscn
+main_menu.tscn::PackedScene::5210531572665413559::1762948152::0::1::::<><><>0<>0<><>::uid://brtg7ebsxyqvd::::res://Concept Art/MainMenuConceptArt.png<>uid://8cycq8jkspdi::::res://Concept Art/Button.png<>uid://bv1epgnyeycup::::res://scripts/start_game.gd<>uid://dhidypwgfoadu::::res://scripts/quit_game.gd<>uid://ddh02cu0oh5k3::::res://music/stalkerish_song.mp3
+player.tscn::PackedScene::2166745670110423650::1762948378::0::1::::<><><>0<>0<><>::uid://jddr7g1gp501::::res://Concept Art/guyConcept.png<>uid://dbgl8606wdqss::::res://scripts/character.gd
+projectile.tscn::PackedScene::4154315112065566065::1762948504::0::1::::<><><>0<>0<><>::uid://doaci6xipfeo1::::res://scripts/projectile.gd<>uid://b7w2xipmery5a::::res://scripts/line_2d.gd
+::res://scripts/::1762948496
+character.gd::GDScript::7242565647642986318::1762948370::0::1::::<>CharacterBody2D<><>0<>0<><>::
+death_particles.gd::GDScript::8187887297935816988::1762948042::0::1::::<>GPUParticles2D<><>0<>0<><>::
+line_2d.gd::GDScript::4679560866674094308::1762948355::0::1::::<>Line2D<><>0<>0<><>::
+projectile.gd::GDScript::8142043246486614750::1762948496::0::1::::<>Area2D<><>0<>0<><>::
 quit_game.gd::GDScript::7667324810725818874::1762878770::0::1::::<>TextureButton<><>0<>0<><>::
 start_game.gd::GDScript::3914330212896274687::1762878770::0::1::::<>TextureButton<><>0<>0<><>::
 ::res://shaders/::1762878925

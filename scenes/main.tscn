@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bp6lotrvv5l3u"]
+[gd_scene load_steps=5 format=3 uid="uid://bp6lotrvv5l3u"]
 
 [ext_resource type="PackedScene" uid="uid://54t8qhs1mgcg" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dg6e7ehmdmte6" path="res://scenes/mutant.tscn" id="2_0wfyh"]
 
 [sub_resource type="Environment" id="Environment_o5qli"]
 glow_enabled = true
@@ -29,3 +30,6 @@ shape = SubResource("RectangleShape2D_o5qli")
 position = Vector2(3.294118, 0)
 scale = Vector2(1.4117647, 1)
 polygon = PackedVector2Array(-8, -98, 26, -98, 26, 130, -8, 130)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(460, -246)

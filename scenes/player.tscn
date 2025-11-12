@@ -11,7 +11,7 @@ texture_filter = 1
 
 [node name="Character" type="CharacterBody2D" parent="."]
 scale = Vector2(3, 3)
-collision_layer = 0
+collision_layer = 128
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]

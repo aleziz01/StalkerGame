@@ -17,7 +17,7 @@ func _on_decay_timer_timeout() -> void:
 
 @onready var particlePosition: Node2D = $ParticlePosition
 
-var endParticles=preload("res://scenes/DeathParticles.tscn")
+var endParticles=preload("res://scenes/BulletParticlesWall.tscn")
 func _on_body_entered(body: Node2D) -> void:
 	var endParticleInstance=endParticles.instantiate()
 	get_parent().add_child(endParticleInstance)
