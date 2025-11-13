@@ -1,3 +1,5 @@
+Area2D
+CollisionShape2D
 AudioStreamPlayer
 HBoxContainer
 RichTextLabel
@@ -6,10 +8,13 @@ Sprite2D
 Control
 Panel
 Node2D
+TileMapLayer
 AnimatedSprite2D
 CharacterBody2D
-CollisionShape2D
-Area2D
 Timer
 GPUParticles2D
 Polygon2D
+Camera2D
+StaticBody2D
+WorldEnvironment
+PointLight2D

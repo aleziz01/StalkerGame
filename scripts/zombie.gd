@@ -63,6 +63,8 @@ func _on_timer_timeout() -> void:
 	direction=Vector2.ZERO
 
 func updateHP(hpAmount):
+	if !target:
+		$DetectionRange.scale=Vector2(3,3)
 	hp+=hpAmount
 	if hpAmount<0:
 		damageAnim()
