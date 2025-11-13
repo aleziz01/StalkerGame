@@ -1,9 +1,1 @@
-res://scenes/zombie.tscn
-res://scripts/zombie.gd
-res://scenes/mutant.tscn
-res://scripts/mutant.gd
-res://scenes/player.tscn
-res://scripts/character.gd
-res://scenes/projectile.tscn
-res://scripts/projectile.gd
-res://scenes/main.tscn
+res://scenes/dalogueSystem.tscn
