@@ -1,7 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763046820
+::res://::1763047533
 icon.svg::CompressedTexture2D::5108192912381009088::1762878770::1762878917::1::::<><><>0<>0<>6aa03a7e8142c896f795f31ae48d2371<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://art/::1763047122
+::res://art/::1763047123
 dirt_tileset.png::CompressedTexture2D::2407388186667112419::1763047122::1763047123::1::::<><><>0<>0<>b0ac3d476fa739db68a4cf3db2560aba<>res://.godot/imported/dirt_tileset.png-a941b7764204a030d1c0b02f3a092596.ctex::
 ::res://Concept Art/::1762983511
 Button.png::CompressedTexture2D::2321822266752548282::1762878770::1762878917::1::::<><><>0<>0<>2254015fef610c4b3eccc36ddadb719e<>res://.godot/imported/Button.png-790ae8ec018ae4edc7f77c6d87bd21ad.ctex::
@@ -11,9 +11,9 @@ mutant.png::CompressedTexture2D::3303277371051394085::1762948798::1762948799::1:
 zombieConcept.png::CompressedTexture2D::4709766023088178588::1762983461::1762983511::1::::<><><>0<>0<>358070301ce70334e3fc1b42c75aa379<>res://.godot/imported/zombieConcept.png-5b21c4f3ccc0e6e9402232d27eb6f585.ctex::
 ::res://music/::1762878917
 stalkerish_song.mp3::AudioStreamMP3::7385845504624105632::1762878770::1762878917::1::::<><><>0<>0<>75a7baef0096e00e0d4fa7a1dd323acd<>res://.godot/imported/stalkerish_song.mp3-010b24bd96a83202f04bf1d79f12a514.mp3str::
-::res://scenes/::1762985530
+::res://scenes/::1763047461
 BulletParticlesWall.tscn::PackedScene::240776904545784413::1762948481::0::1::::<><><>0<>0<><>::uid://dowjkprhxchr5::::res://scripts/death_particles.gd
-main.tscn::PackedScene::3503942961863267096::1762984455::0::1::::<><><>0<>0<><>::uid://54t8qhs1mgcg::::res://scenes/player.tscn<>uid://dg6e7ehmdmte6::::res://scenes/mutant.tscn<>uid://cpwfmyq247w5p::::res://scenes/zombie.tscn
+main.tscn::PackedScene::3503942961863267096::1763047461::0::1::::<><><>0<>0<><>::uid://54t8qhs1mgcg::::res://scenes/player.tscn<>uid://dg6e7ehmdmte6::::res://scenes/mutant.tscn<>uid://cpwfmyq247w5p::::res://scenes/zombie.tscn<>uid://bakfljps2mq5x::::res://art/dirt_tileset.png
 main_menu.tscn::PackedScene::5210531572665413559::1762948152::0::1::::<><><>0<>0<><>::uid://brtg7ebsxyqvd::::res://Concept Art/MainMenuConceptArt.png<>uid://8cycq8jkspdi::::res://Concept Art/Button.png<>uid://bv1epgnyeycup::::res://scripts/start_game.gd<>uid://dhidypwgfoadu::::res://scripts/quit_game.gd<>uid://ddh02cu0oh5k3::::res://music/stalkerish_song.mp3
 mutant.tscn::PackedScene::7644691058116132419::1762984946::0::1::::<><><>0<>0<><>::uid://bnceq4apruqn2::::res://Concept Art/mutant.png<>uid://u4ogt801wyls::::res://scripts/mutant.gd
 player.tscn::PackedScene::2166745670110423650::1762985412::0::1::::<><><>0<>0<><>::uid://jddr7g1gp501::::res://Concept Art/guyConcept.png<>uid://dbgl8606wdqss::::res://scripts/character.gd
