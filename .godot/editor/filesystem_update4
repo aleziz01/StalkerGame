@@ -2,3 +2,4 @@ res://scenes/zaton.tscn
 res://global.gd
 res://scenes/sprite_2d.gd
 res://scenes/dlogTester.gd
+res://scripts/level.gd

@@ -29,11 +29,12 @@ func _on_dlog_g_area_exited(area: Area2D) -> void:
 
 
 func dlogStarted(TESTER):
+	print('dasdasd')
 	dlogActive = true
 	pass # Replace with function body.
 	
 func dlogEnded(TESTER):
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timzer(0.2).timeout
 	print('fdasfadf')
 	dlogActive = false
 	pass # Replace with function body.
