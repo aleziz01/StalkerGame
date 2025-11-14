@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 10000.0
 
+ 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	var directionx := Input.get_axis("left", "right")
@@ -23,6 +24,7 @@ func _physics_process(delta: float) -> void:
 var shootable=true
 var weaponName="makarov"
 func _process(delta: float) -> void:
+	#shooting stuff
 	if Input.is_action_pressed("shoot") && shootable:
 		shootable=false
 		shoot(weaponName)
@@ -45,7 +47,7 @@ func shoot(weaponName):
 
 
 func _on_shoot_timer_timeout() -> void:
-	shootable=true
+	shootable = true
 
 var hp=100
 func updateHP(hpAmount):
@@ -56,7 +58,27 @@ func updateHP(hpAmount):
 		die()
 
 func damageAnim(): #TODO
+	
 	pass
 
 func die(): #TODO
 	pass
+
+
+
+
+
+	pass # Replace with function body.
+
+
+func _on_dlog_p_area_entered(area: Area2D) -> void:
+	Global.entered = true
+	print("its true")
+	
+	pass # Replace with function body.
+
+
+func _on_dlog_p_area_exited(area: Area2D) -> void:
+	Global.entered = false
+	print("its false")
+	pass # Replace with function body.

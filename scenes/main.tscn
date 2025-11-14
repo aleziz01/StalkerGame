@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp6lotrvv5l3u"]
+[gd_scene load_steps=8 format=3 uid="uid://bp6lotrvv5l3u"]
 
 [ext_resource type="PackedScene" uid="uid://54t8qhs1mgcg" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dg6e7ehmdmte6" path="res://scenes/mutant.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://disbqf5lt14fa" path="res://wall.gd" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cpwfmyq247w5p" path="res://scenes/zombie.tscn" id="3_sugp2"]
 
 [sub_resource type="Environment" id="Environment_o5qli"]
@@ -9,6 +10,9 @@ glow_enabled = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
 size = Vector2(52, 230)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sugp2"]
+radius = 144.3468
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
@@ -22,6 +26,7 @@ environment = SubResource("Environment_o5qli")
 
 [node name="wall" type="StaticBody2D" parent="."]
 position = Vector2(467, -1)
+script = ExtResource("2_jyhfs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
 position = Vector2(16, 16)
@@ -31,6 +36,14 @@ shape = SubResource("RectangleShape2D_o5qli")
 position = Vector2(3.294118, 0)
 scale = Vector2(1.4117647, 1)
 polygon = PackedVector2Array(-8, -98, 26, -98, 26, 130, -8, 130)
+
+[node name="Dlog" type="Area2D" parent="wall"]
+position = Vector2(16, 15)
+collision_layer = 4
+collision_mask = 4
+
+[node name="Dcoll" type="CollisionShape2D" parent="wall/Dlog"]
+shape = SubResource("CircleShape2D_sugp2")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(460, -246)

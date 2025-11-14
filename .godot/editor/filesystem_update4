@@ -1,1 +1,6 @@
-res://scenes/dalogueSystem.tscn
+res://scripts/character.gd
+res://wall.gd
+res://scenes/player.tscn
+res://scenes/main.tscn
+res://scripts/Global.gd
+res://scenes/mutant.tscn
