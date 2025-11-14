@@ -60,3 +60,9 @@ func damageAnim(): #TODO
 
 func die(): #TODO
 	pass
+
+
+func _on_dlog_p_area_entered(area: Area2D) -> void:
+	
+	
+	pass # Replace with function body.

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bvrqumowhe4xm"
-path="res://.godot/imported/talk.wav-5d28ba7097f3db3f3991f787a6158052.sample"
+path="res://.godot/imported/talk.wav-b6a354de257f389d61dbb5397f822fa0.sample"
 
 [deps]
 
-source_file="res://Dialogue Art/talk.wav"
-dest_files=["res://.godot/imported/talk.wav-5d28ba7097f3db3f3991f787a6158052.sample"]
+source_file="res://music/talk.wav"
+dest_files=["res://.godot/imported/talk.wav-b6a354de257f389d61dbb5397f822fa0.sample"]
 
 [params]
 

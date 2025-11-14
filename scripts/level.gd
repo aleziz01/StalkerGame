@@ -9,3 +9,9 @@ func _ready() -> void:
 	add_child(playerInstance)
 	playerInstance.global_position=spawn_point.global_position
 	$EndPoint.body_entered.connect(get_parent().changeLevel)
+
+
+	
+	
+	
+	pass # Replace with function body.
