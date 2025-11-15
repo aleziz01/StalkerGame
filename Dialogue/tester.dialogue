@@ -1,3 +1,4 @@
 ~ start
 wall: [speed=0.1]hello old [wave]friend[/wave]
+do emit("end")
 => END

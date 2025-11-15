@@ -14,6 +14,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("dlog") and Global.entered == true and dlogActive == false:
 		DialogueManager.show_dialogue_balloon(TESTER,"start")
+	if Input.is_action_just_pressed("dlog") and Global.entered == true and dlogActive == true:
+		DialogueManager.show_dialogue_balloon(TESTER,"start").hide()
+
 	pass
 
 
