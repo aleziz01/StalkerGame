@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://d05xq7y0dmevf"]
+[gd_scene load_steps=15 format=3 uid="uid://d05xq7y0dmevf"]
 
 [ext_resource type="Script" uid="uid://bb5eup55q0iw8" path="res://scripts/anomaly.gd" id="1_nacbu"]
 [ext_resource type="AudioStream" uid="uid://ddh02cu0oh5k3" path="res://music/stalkerish_song.mp3" id="2_3fuoq"]
+[ext_resource type="PackedScene" uid="uid://54t8qhs1mgcg" path="res://scenes/player.tscn" id="3_c5mn1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3fuoq"]
 radius = 126.09917
@@ -77,9 +78,11 @@ shader_parameter/offset = 3.0
 [node name="Anomaly" type="Node2D"]
 script = ExtResource("1_nacbu")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="detectionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 192
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectionArea"]
 shape = SubResource("CircleShape2D_3fuoq")
 
 [node name="Timer" type="Timer" parent="."]
@@ -112,3 +115,8 @@ texture = SubResource("GradientTexture2D_dkbf3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_3fuoq")
+
+[node name="Player" parent="." instance=ExtResource("3_c5mn1")]
+position = Vector2(-121.815, 0)
+
+[connection signal="body_entered" from="detectionArea" to="." method="_on_detection_area_body_entered"]

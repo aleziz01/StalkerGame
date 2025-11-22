@@ -1,2 +1,3 @@
 res://scenes/anomaly.tscn
 res://shaders/anomaly.gdshader
+res://scripts/anomaly.gd
