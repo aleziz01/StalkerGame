@@ -1,0 +1,114 @@
+[gd_scene load_steps=14 format=3 uid="uid://d05xq7y0dmevf"]
+
+[ext_resource type="Script" uid="uid://bb5eup55q0iw8" path="res://scripts/anomaly.gd" id="1_nacbu"]
+[ext_resource type="AudioStream" uid="uid://ddh02cu0oh5k3" path="res://music/stalkerish_song.mp3" id="2_3fuoq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fuoq"]
+radius = 126.09917
+
+[sub_resource type="Gradient" id="Gradient_c5mn1"]
+offsets = PackedFloat32Array(0, 0.26415095, 0.4716981)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.2, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vbxgc"]
+gradient = SubResource("Gradient_c5mn1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nacbu"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 170.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(0, 0, 0)
+orbit_velocity_min = 1.0000001
+orbit_velocity_max = 1.0000001
+radial_velocity_min = -60.000023
+radial_velocity_max = -60.000023
+gravity = Vector3(0, 0, 0)
+scale_min = 3.0
+scale_max = 5.0
+color_ramp = SubResource("GradientTexture1D_vbxgc")
+
+[sub_resource type="Shader" id="Shader_3fuoq"]
+code = "shader_type canvas_item;
+uniform float offset;
+void fragment() {
+	vec4 color=vec4(0,0,0,0);
+	vec4 initColor=texture(TEXTURE,UV);
+	
+	if (initColor.a!=0.0 && sqrt(((UV.x-0.5)*(UV.x-0.5))+((UV.y-0.5)*(UV.y-0.5)))<=0.3 &&
+	 sqrt(((UV.x-0.5)*(UV.x-0.5))+((UV.y-0.5)*(UV.y-0.5)))>=0.29 && UV.x>=abs(sin((TIME+offset)*0.2)/1.2) && UV.x<=abs(sin((TIME+offset)*0.2)/1.0))
+		color=vec4(1,1,1,0.1);
+	COLOR=color;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vbxgc"]
+shader = SubResource("Shader_3fuoq")
+shader_parameter/offset = 0.0
+
+[sub_resource type="Gradient" id="Gradient_wb5a3"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dkbf3"]
+gradient = SubResource("Gradient_wb5a3")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.77102804, 0.20560747)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5mn1"]
+shader = SubResource("Shader_3fuoq")
+shader_parameter/offset = 2.0
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vbxgc"]
+gradient = SubResource("Gradient_wb5a3")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.77102804, 0.20560747)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wb5a3"]
+shader = SubResource("Shader_3fuoq")
+shader_parameter/offset = 3.0
+
+[node name="Anomaly" type="Node2D"]
+script = ExtResource("1_nacbu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3fuoq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="AttackParticles" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 128
+lifetime = 3.0
+speed_scale = 1.5
+explosiveness = 0.3
+process_material = SubResource("ParticleProcessMaterial_nacbu")
+
+[node name="PassiveParticle" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_vbxgc")
+rotation = 0.5235988
+scale = Vector2(7.005, 7.005)
+texture = SubResource("GradientTexture2D_dkbf3")
+
+[node name="PassiveParticle2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_c5mn1")
+scale = Vector2(7.005, 7.005)
+texture = SubResource("GradientTexture2D_vbxgc")
+
+[node name="PassiveParticle3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wb5a3")
+rotation = 1.0471976
+scale = Vector2(7.0049996, 7.0049996)
+texture = SubResource("GradientTexture2D_dkbf3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_3fuoq")
