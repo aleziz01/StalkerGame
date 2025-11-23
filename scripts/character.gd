@@ -2,28 +2,31 @@ extends CharacterBody2D
 
 
 const SPEED = 10000.0
-
+var dead=false
 func _physics_process(delta: float) -> void:
-	look_at(get_global_mouse_position())
-	var directionx := Input.get_axis("left", "right")
-	var directiony := Input.get_axis("up","down")
-	if directionx:
-		velocity.x+=directionx*SPEED*delta
-		velocity.x=clamp(velocity.x,-300,300)
+	if !dead:
+		look_at(get_global_mouse_position())
+		var directionx := Input.get_axis("left", "right")
+		var directiony := Input.get_axis("up","down")
+		if directionx:
+			velocity.x+=directionx*SPEED*delta
+			velocity.x=clamp(velocity.x,-300,300)
+		else:
+			velocity.x=0
+		if directiony:
+			velocity.y+=directiony*SPEED*delta
+			velocity.y=clamp(velocity.y,-300,300)
+		else:
+			velocity.y=0
 	else:
-		velocity.x=0
-	if directiony:
-		velocity.y+=directiony*SPEED*delta
-		velocity.y=clamp(velocity.y,-300,300)
-	else:
-		velocity.y=0
+		velocity=Vector2.ZERO
 	move_and_slide()
 
 @onready var shootTimer: Timer = $shootTimer
 var shootable=true
 var weaponName="makarov"
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("shoot") && shootable:
+	if Input.is_action_pressed("shoot") && shootable && !dead:
 		shootable=false
 		shoot(weaponName)
 
@@ -59,10 +62,7 @@ func damageAnim(): #TODO
 	pass
 
 func die(): #TODO
-	pass
-
-
-func _on_dlog_p_area_entered(area: Area2D) -> void:
-	
-	
-	pass # Replace with function body.
+	dead=true
+	for i in get_children():
+		if i != get_child(1) and i != get_child(get_child_count()-1):
+			i.queue_free()

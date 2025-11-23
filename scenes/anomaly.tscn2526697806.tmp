@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://d05xq7y0dmevf"]
+
+[ext_resource type="Script" uid="uid://bb5eup55q0iw8" path="res://scripts/anomaly.gd" id="1_nacbu"]
+[ext_resource type="PackedScene" uid="uid://cap2juoarw8vc" path="res://scenes/air_particle.tscn" id="2_c5mn1"]
+[ext_resource type="Script" uid="uid://plwy4lqoe16b" path="res://scripts/AirParticle.gd" id="3_vbxgc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fuoq"]
+radius = 126.09917
+
+[node name="Anomaly" type="Node2D"]
+script = ExtResource("1_nacbu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3fuoq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AirParticle" parent="." instance=ExtResource("2_c5mn1")]
+position = Vector2(-120, 0)
+rotation = -1.5707964
+script = ExtResource("3_vbxgc")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

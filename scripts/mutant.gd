@@ -6,6 +6,7 @@ var direction=Vector2.ZERO
 var attacking=false
 var attackCooldown=false
 var target=null
+var dead=false
 
 func _physics_process(delta: float) -> void:
 	if target && !attacking && (target.global_position-global_position).length()>30:
@@ -69,3 +70,4 @@ func die():
 	direction=Vector2.ZERO
 	speed=0
 	z_index=-1
+	dead=true
