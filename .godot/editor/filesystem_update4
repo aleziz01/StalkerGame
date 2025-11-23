@@ -5,3 +5,8 @@ res://scripts/character.gd
 res://scenes/BulletParticlesWall.tscn
 res://scenes/mutant.tscn
 res://scripts/mutant.gd
+res://scenes/hurt_particles.tscn
+res://scripts/hurt_particles.gd
+res://scenes/projectile.tscn
+res://scenes/player.tscn
+res://scenes/zaton.tscn

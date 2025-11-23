@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d05xq7y0dmevf"]
+[gd_scene load_steps=15 format=3 uid="uid://d05xq7y0dmevf"]
 
 [ext_resource type="Script" uid="uid://bb5eup55q0iw8" path="res://scripts/anomaly.gd" id="1_nacbu"]
 [ext_resource type="AudioStream" uid="uid://ddh02cu0oh5k3" path="res://music/stalkerish_song.mp3" id="2_3fuoq"]
@@ -74,7 +74,19 @@ fill_to = Vector2(0.77102804, 0.20560747)
 shader = SubResource("Shader_3fuoq")
 shader_parameter/offset = 3.0
 
-[node name="Anomaly" type="Node2D"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3fuoq"]
+particle_flag_disable_z = true
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 500.0
+initial_velocity_max = 1000.0
+gravity = Vector3(0, 0, 0)
+scale_max = 5.0
+color = Color(1, 1, 1, 0.13800001)
+
+[node name="AirAnomaly" type="Node2D"]
 script = ExtResource("1_nacbu")
 
 [node name="detectionArea" type="Area2D" parent="."]
@@ -117,5 +129,14 @@ stream = ExtResource("2_3fuoq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
+
+[node name="explosionParticle" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 256
+lifetime = 0.7
+one_shot = true
+speed_scale = 5.0
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_3fuoq")
 
 [connection signal="body_entered" from="detectionArea" to="." method="_on_detection_area_body_entered"]

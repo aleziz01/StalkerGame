@@ -62,4 +62,7 @@ func damageAnim(): #TODO
 	pass
 
 func die(): #TODO
-	pass
+	dead=true
+	for i in get_children():
+		if i != get_child(1) and i != get_child(get_child_count()-1):
+			i.queue_free()
