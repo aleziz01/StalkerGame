@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763838798
+::res://::1763898847
 icon.svg::CompressedTexture2D::5108192912381009088::1762878770::1762878917::1::::<><><>0<>0<>6aa03a7e8142c896f795f31ae48d2371<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://art/::1763047123
 dirt_tileset.png::CompressedTexture2D::2407388186667112419::1763047122::1763047123::1::::<><><>0<>0<>b0ac3d476fa739db68a4cf3db2560aba<>res://.godot/imported/dirt_tileset.png-a941b7764204a030d1c0b02f3a092596.ctex::
@@ -30,8 +30,8 @@ PixelOperatorSC-Bold.ttf::FontFile::4320788426002293419::1763052031::1763052031:
 PixelOperatorSC.ttf::FontFile::2581481336386896227::1763052031::1763052031::1::::<><><>0<>0<>f26a45543e053a0120d7e887854e1fa2<>res://.godot/imported/PixelOperatorSC.ttf-1a827be1c1f4e86cf6bf6d128ac46a58.fontdata::
 ::res://music/::1762878917
 stalkerish_song.mp3::AudioStreamMP3::7385845504624105632::1762878770::1762878917::1::::<><><>0<>0<>75a7baef0096e00e0d4fa7a1dd323acd<>res://.godot/imported/stalkerish_song.mp3-010b24bd96a83202f04bf1d79f12a514.mp3str::
-::res://scenes/::1763838712
-anomaly.tscn::PackedScene::8977341257150895247::1763838712::0::1::::<><><>0<>0<><>::uid://bb5eup55q0iw8::::res://scripts/anomaly.gd<>uid://ddh02cu0oh5k3::::res://music/stalkerish_song.mp3<>uid://cidklk6d317uo::::res://shaders/anomaly.gdshader
+::res://scenes/::1763841319
+anomaly.tscn::PackedScene::8977341257150895247::1763841319::0::1::::<><><>0<>0<><>::uid://bb5eup55q0iw8::::res://scripts/anomaly.gd<>uid://ddh02cu0oh5k3::::res://music/stalkerish_song.mp3<>uid://54t8qhs1mgcg::::res://scenes/player.tscn
 BulletParticlesWall.tscn::PackedScene::240776904545784413::1762948481::0::1::::<><><>0<>0<><>::uid://dowjkprhxchr5::::res://scripts/death_particles.gd
 dalogueSystem.tscn::PackedScene::5118666388756775783::1763052031::0::1::::<><><>0<>0<><>::uid://bshnmy4c7v40s::::res://Dialogue Art/pixel_operator/PixelOperator-Bold.ttf
 main.tscn::PackedScene::3503942961863267096::1763052091::0::1::::<><><>0<>0<><>::uid://ba2r6bfm3wwb0::::res://scripts/main.gd
@@ -41,8 +41,8 @@ player.tscn::PackedScene::2166745670110423650::1762985412::0::1::::<><><>0<>0<><
 projectile.tscn::PackedScene::4154315112065566065::1763049420::0::1::::<><><>0<>0<><>::uid://doaci6xipfeo1::::res://scripts/projectile.gd<>uid://b7w2xipmery5a::::res://scripts/line_2d.gd
 zaton.tscn::PackedScene::8416040768716997270::1763838055::0::1::::<><><>0<>0<><>::uid://5axhdoxvaqw::::res://scripts/level.gd<>uid://bakfljps2mq5x::::res://art/dirt_tileset.png<>uid://cpwfmyq247w5p::::res://scenes/zombie.tscn<>uid://dg6e7ehmdmte6::::res://scenes/mutant.tscn<>uid://d05xq7y0dmevf::::res://scenes/anomaly.tscn
 zombie.tscn::PackedScene::5871416633580762515::1763049509::0::1::::<><><>0<>0<><>::uid://b8dpfm8vc6wga::::res://Concept Art/zombieConcept.png<>uid://yq7sskdcuw44::::res://scripts/zombie.gd
-::res://scripts/::1763838080
-anomaly.gd::GDScript::2518820279381911861::1763838080::0::1::::<>Node2D<><>0<>0<><>::
+::res://scripts/::1763841319
+anomaly.gd::GDScript::2518820279381911861::1763841319::0::1::::<>Node2D<><>0<>0<><>::
 character.gd::GDScript::7242565647642986318::1762985397::0::1::::<>CharacterBody2D<><>0<>0<><>::
 death_particles.gd::GDScript::8187887297935816988::1762948042::0::1::::<>GPUParticles2D<><>0<>0<><>::
 level.gd::GDScript::61972778847127758::1763051565::0::1::::<>Node2D<><>0<>0<><>::
@@ -53,5 +53,5 @@ projectile.gd::GDScript::8142043246486614750::1762985330::0::1::::<>Area2D<><>0<
 quit_game.gd::GDScript::7667324810725818874::1762878770::0::1::::<>TextureButton<><>0<>0<><>::
 start_game.gd::GDScript::3914330212896274687::1762878770::0::1::::<>TextureButton<><>0<>0<><>::
 zombie.gd::GDScript::1719538340444686831::1763049510::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://shaders/::1763838712
-anomaly.gdshader::Shader::5341172636710480614::1763838712::0::1::::<><><>0<>0<><>::
+::res://shaders/::1763840769
+anomaly.gdshader::Shader::5341172636710480614::1763840769::0::1::::<><><>0<>0<><>::

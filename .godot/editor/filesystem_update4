@@ -1,3 +1,7 @@
 res://scenes/anomaly.tscn
 res://shaders/anomaly.gdshader
 res://scripts/anomaly.gd
+res://scripts/character.gd
+res://scenes/BulletParticlesWall.tscn
+res://scenes/mutant.tscn
+res://scripts/mutant.gd
