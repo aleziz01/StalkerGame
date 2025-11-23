@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://dr517x6at2us1"]
+[gd_scene load_steps=9 format=4 uid="uid://dr517x6at2us1"]
 
 [ext_resource type="Script" uid="uid://5axhdoxvaqw" path="res://scripts/level.gd" id="1_i3vp2"]
 [ext_resource type="Texture2D" uid="uid://bakfljps2mq5x" path="res://art/dirt_tileset.png" id="1_ly3kb"]
 [ext_resource type="PackedScene" uid="uid://cpwfmyq247w5p" path="res://scenes/zombie.tscn" id="3_orsbr"]
 [ext_resource type="PackedScene" uid="uid://dg6e7ehmdmte6" path="res://scenes/mutant.tscn" id="4_fnx7q"]
-[ext_resource type="Texture2D" uid="uid://ce1pgq0efbsvw" path="res://icon.svg" id="5_fnx7q"]
-[ext_resource type="Script" uid="uid://b5auf52asx8oa" path="res://scenes/dlogTester.gd" id="6_ngpbd"]
+[ext_resource type="PackedScene" uid="uid://d05xq7y0dmevf" path="res://scenes/anomaly.tscn" id="5_fnx7q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3vp2"]
 texture = ExtResource("1_ly3kb")
@@ -72,9 +71,6 @@ sources/0 = SubResource("TileSetAtlasSource_i3vp2")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orsbr"]
 size = Vector2(235, 319)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_431rd"]
-radius = 118.82761
-
 [node name="Zaton" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_i3vp2")
@@ -105,17 +101,5 @@ collision_mask = 128
 position = Vector2(-2.5, 0.5)
 shape = SubResource("RectangleShape2D_orsbr")
 
-[node name="dlogTester" type="Sprite2D" parent="."]
-position = Vector2(568, 932)
-texture = ExtResource("5_fnx7q")
-script = ExtResource("6_ngpbd")
-
-[node name="DlogG" type="Area2D" parent="dlogTester"]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dlogTester/DlogG"]
-shape = SubResource("CircleShape2D_431rd")
-
-[connection signal="area_entered" from="dlogTester/DlogG" to="dlogTester" method="_on_dlog_g_area_entered"]
-[connection signal="area_exited" from="dlogTester/DlogG" to="dlogTester" method="_on_dlog_g_area_exited"]
+[node name="Anomaly" parent="." instance=ExtResource("5_fnx7q")]
+position = Vector2(-411, -34)
